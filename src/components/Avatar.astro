@@ -87,7 +87,7 @@
     }
 
     const paths = ['/', '/about-me'];
-    const currentPath = window.location.pathname;
+    const currentPath = window.location.pathname.replace(/\/$/, '');
     const normalizedPaths = paths.map((path) => path.replace(/\/$/, ''));
 
     if (!normalizedPaths.includes(currentPath)) {
